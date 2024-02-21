@@ -34,7 +34,7 @@ fs.access('./assets', fs.constants.F_OK, (err) => {
     }
 })
 
-fs.access('./delete.txt', fs.constants.F_OK, (err) => {
+fs.access('./delete.txt', (err) => {
     if(err) {
         console.log("delete Datei existiert nicht");
         fs.writeFile('./delete.txt', "irgendwas", (err) => {
