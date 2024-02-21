@@ -53,3 +53,17 @@ fs.access('./delete.txt', fs.constants.F_OK, (err) => {
         })
     }
 })
+
+fs.writeFile('./hello.txt', 'hello', (err) => {
+    if(err) {
+        throw err
+    }
+    console.log("geändert");
+})
+
+fs.rename('./hello.txt', './helloWorld.txt', (err) => {
+    if(err) {
+        console.log("Ordner konnte nicht umbenannt werden");
+    }
+    console.log("renamed");
+})
